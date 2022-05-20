@@ -17,6 +17,7 @@ type Sequence struct {
 type Tokens []Token
 
 func init() {
+	println("initttt")
 	Sequences = append(Sequences, sequences_Bool...)
 	Sequences = append(Sequences, sequences_String...)
 	Sequences = append(Sequences, sequences_Map...)
@@ -67,6 +68,7 @@ func (s Sequence) Append(tok Token) Sequence {
 var SequenceMap map[string]Sequence
 
 func init() {
+	println("yyyyy init")
 	SequenceMap = make(map[string]Sequence, len(Sequences))
 	for _, v := range Sequences {
 		SequenceMap[v.Title] = v
